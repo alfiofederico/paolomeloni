@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylish Digital Business Card</title>
+    <title>Paolo Meloni Business Card</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -104,8 +104,8 @@
             max-width: 90%;
         }
         .card img {
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
         }
         button {
             width: 100%;
@@ -115,13 +115,14 @@
         .fas fa-link {
             text-decoration: none!important
         }
+       
     }
 </style>
 
 </head>
 <body>
     <div class="card">
-        <img src="profilo.jpeg" alt="Profile Picture of Paolo Meloni">
+        <img src="profilo.jpeg" alt="Profile Picture of Paolo Meloni" class="profile">
         <h1>Paolo Meloni</h1>
         <p class="semi-bold"><i class="fas fa-phone"></i>+39 3398822850</p>
         <p class="semi-bold"><i class="fas fa-envelope"></i>paolomeloni59@gmail.com</p>
@@ -131,8 +132,8 @@
             <button onclick="generatePDF()">Download Business Card (PDF)</button>
         </div>
         <div class="button-container">
-            <button onclick="copyToClipboard('+39 3398822850')">Copy Phone Number</button>
-            <button onclick="copyToClipboard('paolomeloni59@gmail.com')">Copy Email</button>
+            <button onclick="copyToClipboard('+39 3398822850')">Copia Numero</button>
+            <button onclick="copyToClipboard('paolomeloni59@gmail.com')">Copia Email</button>
         </div>
         <div class="social-icons">
             <a href="https://facebook.com/paolomeloni" target="_blank" class="fab fa-facebook" aria-label="Facebook"></a>
@@ -175,7 +176,7 @@
         // Copy text to clipboard
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
-                alert("Copied to clipboard");
+                alert("Copiato");
             });
         }
     </script>
