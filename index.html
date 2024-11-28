@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Paolo Meloni Business Card</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -15,68 +15,52 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            overflow: hidden; /* Prevent scrolling */
         }
-
         .card {
             background-color: #ffffff;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            padding: 30px;
             max-width: 400px;
             text-align: center;
             transition: transform 0.3s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: auto;
         }
-
         .card:hover {
             transform: translateY(-10px);
         }
-
         .card img {
             border-radius: 50%;
-            width: 100px; /* Smaller size */
-            height: 100px; /* Smaller size */
+            width: 120px;
+            height: 120px;
             margin-bottom: 20px;
         }
-
         .card h1 {
-            font-size: 24px; /* Slightly smaller for mobile */
+            font-size: 28px;
             color: #333;
             margin-bottom: 10px;
         }
-
         .card p {
             color: #555;
-            font-size: 14px; /* Slightly smaller for mobile */
+            font-size: 16px;
             margin: 5px 0;
             display: flex;
-            justify-content: center;
             align-items: center;
         }
-
         .card p.bold {
             font-weight: bold;
             color: #333;
         }
-
         .card p i {
             margin-right: 10px;
             font-size: 18px;
             color: #007bff;
         }
-
         .qr-code {
-            margin-top: 10px;
+            margin-top: 20px;
         }
-
         .button-container {
             margin-top: 20px;
         }
-
         button {
             background-color: #87b5e6; /* Light grey background */
             border: none;
@@ -86,29 +70,34 @@
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s;
-            width: 100%;
-            margin-bottom: 10px;
         }
-
         button:hover {
             background-color: #b8b8b8; /* Slightly darker grey on hover */
         }
-
         .social-icons {
             margin-top: 20px;
             display: flex;
-            justify-content: center;
-            gap: 15px;
+            justify-content: center; /* Center the icons */
         }
-
         .social-icons a {
             color: #007bff; /* Default color for social icons */
             font-size: 20px;
+            margin: 0 10px;
             transition: color 0.3s;
         }
-
         .social-icons a:hover {
             color: #ff5733; /* Change color to orange on hover */
+        }
+
+        /* Change color of website link */
+        .card a {
+            color: #2d89e2; /* Blue color for the link */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .card a:hover {
+            color: #ff5733; /* Change color to orange on hover */
+            text-decoration: underline; /* Underline on hover for better visibility */
         }
 
         /* Mobile responsiveness */
@@ -117,27 +106,25 @@
                 padding: 15px;
                 max-width: 90%;
             }
-
             .card img {
-                width: 90px;
-                height: 90px;
+                margin-top: 10px; /* Adjust margin for better spacing */
+                width: 100px; /* Smaller image size on mobile */
+                height: 100px;
             }
-
             .card h1 {
-                font-size: 22px;
+                font-size: 24px; /* Adjust heading font size */
             }
-
             .card p {
-                font-size: 12px; /* Adjust text size */
+                font-size: 14px; /* Adjust text size for mobile */
             }
-
-            .button-container button {
-                padding: 10px 15px; /* Adjust button size */
+            button {
+                padding: 10px 15px; /* Adjust button padding for mobile */
+                font-size: 14px; /* Adjust font size */
+                width: 100%;
+                margin-bottom: 15px; /* Add space between buttons */
             }
-
-            .social-icons {
-                margin-top: 10px;
-                gap: 10px;
+            .social-icons a {
+                margin: 0 8px; /* Reduce space between icons */
             }
         }
     </style>
@@ -169,8 +156,8 @@
         // Generate QR Code
         new QRCode(document.getElementById("qrcode"), {
             text: "https://paolomelonistudio.com",
-            width: 120,  // Reduced size for QR code
-            height: 120  // Reduced size for QR code
+            width: 150,
+            height: 150
         });
 
         // Generate PDF
